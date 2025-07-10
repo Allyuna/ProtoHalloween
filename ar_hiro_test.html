@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR Test - Marker Hiro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; background-color: black; }
+      #info {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+        color: white;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">📷 Scannez le marker HIRO pour révéler l'ingrédient secret</div>
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+      <a-marker preset="hiro">
+        <a-text value="O" color="#ff0000" align="center" position="0 0.5 0" scale="6 6 6" side="double"></a-text>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
