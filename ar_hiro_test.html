@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AR Test - Marker Hiro</title>
+    <title>Lettre O 3D - AR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.min.js"></script>
@@ -20,24 +20,24 @@
     </style>
   </head>
   <body>
-    <div id="info">📷 Scannez le marker HIRO pour révéler l'ingrédient secret</div>
-  <a-scene embedded arjs vr-mode-ui="enabled: false">
-  
-  <!-- Chargement du modèle -->
-  <a-assets>
-    <a-asset-item id="letterO" src="letter_O.glb"></a-asset-item>
-  </a-assets>
+    <div id="info">📷 Scannez le marker HIRO pour révéler l’ingrédient</div>
 
-  <!-- Marker Hiro avec modèle 3D -->
-  <a-marker preset="hiro">
-    <a-entity gltf-model="#letterO" 
-              position="0 0 0" 
-              scale="1 1 1" 
-              rotation="0 0 0">
-    </a-entity>
-  </a-marker>
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+      <!-- Charger le modèle 3D -->
+      <a-assets>
+        <a-asset-item id="letterO" src="letter_O.glb"></a-asset-item>
+      </a-assets>
 
-  <a-entity camera></a-entity>
-</a-scene>
+      <!-- Marker Hiro avec la lettre O -->
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#letterO"
+                  position="0 0 0"
+                  scale="1 1 1"
+                  rotation="0 0 0">
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
   </body>
 </html>
